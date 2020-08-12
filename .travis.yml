@@ -5,7 +5,7 @@ services:
 
 
 before_install:
-    - docker build - lypukachi/docker-react -f Dockerfile.dev .
+    - docker build -t lypukachi/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true lypukachi/docker-react npm run test
